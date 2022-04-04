@@ -1,0 +1,32 @@
+package hashinggfg;
+import java.util.*;
+public class subarraysum0 {
+
+	public static void main(String[] args) {
+		int a[]= {1,4,13,-3,-10,5};
+		int n=a.length;
+//		for(int i=0;i<n;i++)
+//		{
+//			int sum=0;
+//			for(int j=i;j<n;j++)
+//			{
+//				sum=sum+a[j];
+//				if(sum==0)
+//					System.out.println("true");
+//			}
+//		}
+          
+		//efficient solution
+		Set<Integer> us=new HashSet<Integer>();
+		int sum=0;
+		for(int i=0;i<n;i++)
+		{
+			sum=sum+a[i];
+			if(us.contains(sum))
+				System.out.println("true");
+			us.add(sum);
+		}
+		
+	}
+
+}
