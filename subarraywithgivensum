@@ -6,6 +6,8 @@ public class subarraywithgivensum {
 
 	public static void main(String[] args) {
 		int arr[]= {5,8,6,13,3,-1};
+		
+		//naive approach
 //		
 //		for(int i=0;i<arr.length;i++)
 //		{
