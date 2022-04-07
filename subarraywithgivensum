@@ -1,0 +1,34 @@
+package hashinggfg;
+
+import java.util.HashSet;
+
+public class subarraywithgivensum {
+
+	public static void main(String[] args) {
+		int arr[]= {5,8,6,13,3,-1};
+//		
+//		for(int i=0;i<arr.length;i++)
+//		{
+//			int sum=22,curr_sum=0;
+//			for(int j=i;j<arr.length;j++) {
+//				curr_sum=curr_sum+arr[j];
+//				if(curr_sum==sum)
+//					System.out.println("true");
+//			}
+//		}
+		
+		int n=arr.length;
+		HashSet<Integer> hm=new HashSet<>();
+		int pre_sum=0;int sum=22;
+		for(int i=0;i<n;i++)
+		{
+			 pre_sum= pre_sum+arr[i];
+			if(hm.contains( pre_sum-sum))
+				System.out.println("true");
+			hm.add( pre_sum);
+		}
+		System.out.print(hm);
+
+	}
+
+}
