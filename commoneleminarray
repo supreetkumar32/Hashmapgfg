@@ -1,0 +1,35 @@
+package hashmap;
+import java.util.*;
+public class Commoneleinarray {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a1[]= {1,1,2,2,2,3,5};
+		int a2[]= {1,1,1,2,2,4,5};
+		HashMap<Integer,Integer> hm=new HashMap<>();
+		for(int val:a1)
+		{
+			if(hm.containsKey(val))
+			{
+		      int of=hm.get(val);
+		      int nf=of+1;
+		      hm.put(val, nf);
+		       
+		   }else {
+				hm.put(val, 1);
+				
+			}
+		}
+		System.out.println(hm);
+		for(int val1:a2)
+		{
+			if(hm.containsKey(val1))
+			{
+				System.out.println(val1);
+				hm.remove(val1);
+			}
+		}
+
+	}
+
+}
